@@ -1,0 +1,28 @@
+﻿@model List<CorseEntity.Concrete.Exam>
+@{
+    ViewData["Title"] = "GetAllIdExam";
+    Layout = "~/Views/Shared/Layout_UI.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Telebe adi</th>
+        <th>Imtahan movzusu</th>
+        <th>100 uzerinden qiymetlendirme</th>
+        <th>Tarixi</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ExamId</td>
+         @*   <td>@item.StudentID</td>*@
+            <td>@(ViewBag.StudentName.Count > 0 ? ViewBag.StudentName[0] : "Not Available")</td>
+            <td>@item.ExamTopic</td>
+            <td>@item.ExamGrade</td>
+            <td>@item.ExamTime.ToString("dd/MM/yyyy") </td>
+        </tr>
+    }
+
+</table>

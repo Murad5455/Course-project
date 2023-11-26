@@ -1,0 +1,35 @@
+﻿@model CorseEntity.Concrete.Exam
+@{
+    ViewData["Title"] = "GetUpdateExam";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+@using (Html.BeginForm("UpdateExam", "Exam", FormMethod.Post))
+{
+    <br />
+
+    <b>Id</b>
+    @Html.TextBoxFor(x => x.ExamId, new { @class = "form-control" })
+
+    <br />
+    <b>Qrupun adi</b>
+    @Html.TextBoxFor(x => x.ExamTopic, new { @class = "form-control" })
+
+    <br />
+    <b>100 uzerinden qiymeti</b>
+    @Html.TextBoxFor(x => x.ExamGrade, new { @class = "form-control" })
+
+  @*  <br />
+    <b>Imtahan tarixi</b>
+    @Html.TextBoxFor(x => x.ExamTime, new { @class = "form-control" })
+*@
+    <br />
+    <b>Telebe adi</b>
+    @Html.DropDownListFor(x=>x.StudentID,(List<SelectListItem>)ViewBag.Values,new {@class="form-control"})
+
+
+
+    <br />
+    <button class="btn btn-info"> Guncelle </button>
+
+}

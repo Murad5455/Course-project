@@ -1,0 +1,17 @@
+D:\GitHub test\CorseRegistration\DataAccessLayer\bin\Release\net6.0\DataAccessLayer.deps.json
+D:\GitHub test\CorseRegistration\DataAccessLayer\bin\Release\net6.0\DataAccessLayer.runtimeconfig.json
+D:\GitHub test\CorseRegistration\DataAccessLayer\bin\Release\net6.0\DataAccessLayer.dll
+D:\GitHub test\CorseRegistration\DataAccessLayer\bin\Release\net6.0\DataAccessLayer.pdb
+D:\GitHub test\CorseRegistration\DataAccessLayer\bin\Release\net6.0\CorseEntity.dll
+D:\GitHub test\CorseRegistration\DataAccessLayer\bin\Release\net6.0\CorseEntity.pdb
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.csproj.CopyComplete
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.dll
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\refint\DataAccessLayer.dll
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.pdb
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\DataAccessLayer.genruntimeconfig.cache
+D:\GitHub test\CorseRegistration\DataAccessLayer\obj\Release\net6.0\ref\DataAccessLayer.dll

@@ -1,0 +1,30 @@
+﻿@model List<CorseEntity.Concrete.LanguageAbout>
+@{
+    ViewData["Title"] = "GetListLanguageAll";
+    Layout = "~/Views/Shared/Layout_UI.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Kursun adi</th>
+        <th>Aciqlama</th>
+        <th>Yaradilma tarixi</th>
+        <th>Qruplar</th>
+     
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.LanguageAboutId </td>
+            <td> @item.LanguageName </td>
+            <td> @item.Description </td>
+            <td>@item.CreateLanguageTime.ToString("dd/MM/yyyy")</td>
+            <td><a href="/UI/GetListGroup/@item.LanguageAboutId/" class="btn btn-primary">Qruplar</a> </td>
+           
+
+        </tr>
+    }
+</table>

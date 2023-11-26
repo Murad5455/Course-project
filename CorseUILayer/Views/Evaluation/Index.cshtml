@@ -1,0 +1,45 @@
+﻿@model List<CorseEntity.Concrete.Evaluation>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+<a href="/Evaluation/GetEvaluation/" class="btn btn-info">Yeni qiymet</a>
+   
+
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Davamiyyeti</th>
+        <th>Qiymeti</th>
+        <th>Dersin tarixi</th>
+        <th>Telebenin adi</th>
+        <th>Guncelle</th>
+        <th>Sil</th>
+    </tr>
+  
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EvaluationId</td>
+            <td>@item.Continuity</td>
+            <td>@item.Price</td>
+            <td>@item.PriceGiveDate.ToString("dd/MM/yyyy")</td>
+          @*  <td>@item.StudentID</td>*@
+            <td>@(ViewBag.StudentName.Count > 0 ? ViewBag.StudentName[0] : "Not Available")</td>
+            <td><a href="/Evaluation/GetUpdate/@item.EvaluationId/" class="btn btn-warning">Guncelle</a></td>
+            <td><a href="/Evaluation/DeleteEvaluation/@item.EvaluationId/" class="btn btn-danger">Sil</a></td>
+           
+        </tr>
+       
+    }
+
+</table>
+
+
+
+
+

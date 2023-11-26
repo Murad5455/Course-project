@@ -1,0 +1,38 @@
+﻿@using CorseEntity.Concrete;
+@model List<Student>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Adi</th>
+        <th>Soyadi</th>    
+        <th>Yasi</th>
+        <th>Qeydiyyat tarixi</th>
+        <th>Imtahan</th>
+        <th>Fealiyyeti</th>
+        <th>Update</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.StudentID</td>
+            <td>@item.StudentName</td>
+            <td>@item.StudentSureName</td>
+            <td>@item.StudentAge</td>
+            <td>@item.CreateStudentTime.ToString("dd/MM/yyyy")</td>
+            <td><a href="/Exam/Index/@item.StudentID/" class="btn btn-primary">Imtahan</a></td>
+            <th><a href="/Evaluation/Index/@item.StudentID/" class="btn btn-primary">Qiymeti</a></th>
+            <td><a href="/Student/GetUpdateStudent/@item.StudentID/" class="btn btn-warning">Update</a></td>
+            <td><a href="/Student/DeleteStudentt/@item.StudentID/" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }   
+
+</table>
+
+<td><a href="/Student/GetNewStudent/" class="btn btn-primary">Yeni telebe</a></td>

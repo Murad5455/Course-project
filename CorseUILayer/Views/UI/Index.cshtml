@@ -1,0 +1,32 @@
+﻿ 
+@model List<CorseEntity.Concrete.Teacher>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layout_UI.cshtml";
+}
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Adi</th>
+        <th>Soyadi</th>
+        <th>Yasi</th>
+        <th>Vezifesi</th>
+
+    </tr>
+    <tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <th> @item.TeacherId</th>
+            <td> @item.TeacherName</td>
+            <td> @item.TeacherLastname</td>
+            <td> @item.TeacherAge</td>
+            <td> @item.Position</td>
+
+        </tr>
+        }
+
+
+</table>
+
+<a href="/Language/Index/"class="btn btn-primary">Admin</a>

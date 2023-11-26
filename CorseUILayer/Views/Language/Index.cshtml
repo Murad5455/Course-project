@@ -1,0 +1,32 @@
+﻿@using CorseEntity.Concrete
+@model List<LanguageAbout>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Kursun adi</th>
+        <th>Aciqlama</th>   
+        <th>Qruplar</th>
+        <th>Guncelle</th>
+        <th>Sil</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td> @item.LanguageAboutId </td>
+            <td> @item.LanguageName </td>
+            <td> @item.Description </td>
+            <td><a href="/Group/Index/@item.LanguageAboutId/" class="btn btn-primary">Qrup</a> </td>
+            <td><a href="/Language/GetUpdateLanguage/@item.LanguageAboutId/" class="btn btn-warning">Guncelle</a> </td>
+            <td><a href="/Language/LanguageDelete/@item.LanguageAboutId/" class="btn btn-danger">Sil</a> </td>
+            
+        </tr>
+    }
+</table>
+
+<a href="/Language/GetAddLanguage/" class="btn btn-info">Yeni dil</a>

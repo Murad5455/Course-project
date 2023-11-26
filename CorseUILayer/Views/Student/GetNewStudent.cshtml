@@ -1,0 +1,38 @@
+﻿@model CorseEntity.Concrete.Student
+@{
+    ViewData["Title"] = "GetNewStudent";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+<h1>Yeni telebe</h1>
+
+@using (Html.BeginForm("AddNewStudent", "Student", FormMethod.Post))
+{
+    <br />
+
+    <b>Idsi</b>
+    @Html.TextBoxFor(x => x.StudentID, new { @class = "form-control" })
+
+    <br />
+    <b>Adi</b>
+    @Html.TextBoxFor(x => x.StudentName, new { @class = "form-control" })
+
+    <br />
+    <b>Soyadi</b>
+    @Html.TextBoxFor(x => x.StudentSureName, new { @class = "form-control" })
+
+    <br />
+    <b>Yasi</b>
+    @Html.TextBoxFor(x => x.StudentAge, new { @class = "form-control" })
+   @* <br />
+    <b>Yaradilma tarixi</b>
+    @Html.TextBoxFor(x => x.CreateStudentTime, new { @class = "form-control" })
+*@
+    <br />
+    <b>Qrup adi</b>
+    @Html.DropDownListFor(x=>x.GroupId,(List<SelectListItem>)ViewBag.Values,new {@class="form-control"})
+
+    <br />
+    <button class="btn btn-info"> Elave et </button>
+
+}

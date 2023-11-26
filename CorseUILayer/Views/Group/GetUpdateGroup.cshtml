@@ -1,0 +1,44 @@
+﻿@model CorseEntity.Concrete.GroupAbout
+@{
+    ViewData["Title"] = "GetUpdateGroup";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+@using (Html.BeginForm("GroupUpdate", "Group", FormMethod.Post))
+{
+    <br />
+
+    <b>Idsi</b>
+    @Html.TextBoxFor(x => x.GroupId, new { @class = "form-control" })
+
+    <br />
+    <b>Qrupun adi</b>
+    @Html.TextBoxFor(x => x.GroupName, new { @class = "form-control" })
+
+    <br />
+    <b>Kurs</b>
+    @Html.DropDownListFor(x=>x.LanguageAboutId,(List<SelectListItem>)ViewBag.Values,new {@class="form-control"})
+ 
+        @* <select class="form-control" >
+       @foreach (var value in ViewBag.Values)
+        {
+            
+            if (value.Value == ViewBag.languageId.ToString())
+            {
+                <option selected id="value.Value">@value.Text</option>
+            }
+            else
+            {
+                <option id="value.Value">@value.Text</option>
+            }
+        }    
+    </select>*@
+
+    <br />
+    <b>Muellim</b>
+    @Html.DropDownListFor(x=>x.TeacherId,(List<SelectListItem>)ViewBag.Values2,new {@class="form-control"})
+
+    <br />
+    <button class="btn btn-info"> Guncelle </button>
+
+}

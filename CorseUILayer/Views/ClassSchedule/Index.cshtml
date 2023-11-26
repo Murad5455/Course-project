@@ -1,0 +1,39 @@
+﻿@model List<CorseEntity.Concrete.Schedule>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Bazar ertəsi</th>
+        <th>Çərşənbə axşamı</th>
+        <th>Çərşənbə</th>
+        <th>Cümə axşamı</th>
+        <th>Cümə</th>
+        <th>Şənbə</th>
+        <th>Bazar</th>
+        <th>Yaradilma tarixi</th>
+        <th>Guncelle</th>
+        <th>Sil</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ClassScheduleId</td>
+            <td>@item.Monday</td>
+            <td>@item.Tuesday</td>
+            <td>@item.Wednesday</td>
+            <td>@item.Thursday</td>
+            <td>@item.Friday</td>
+            <td>@item.Saturday</td>
+            <td>@item.Sunday</td>
+            <td>@item.CreateTime.ToString("dd/MM/yyyy") </td>
+            <td><a href="/ClassSchedule/GetUpdateSchedule/@item.ClassScheduleId/" class="btn btn-warning">Guncelle</a></td>
+            <td><a href="/ClassSchedule/ScheduleDelete/@item.ClassScheduleId/" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+<a href="/ClassSchedule/GetAddSchedule/" class="btn btn-primary">Yeni cedvel</a>

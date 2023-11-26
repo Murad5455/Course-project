@@ -1,0 +1,30 @@
+﻿@model CorseEntity.Concrete.GroupAbout
+@{
+    ViewData["Title"] = "GetAddGroup";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+@using (Html.BeginForm("GroupAdd", "Group", FormMethod.Post))
+{
+    <br />
+
+    <b>Idsi</b>
+    @Html.TextBoxFor(x => x.GroupId, new { @class = "form-control" })
+
+    <br />
+    <b>Qrupun adi</b>
+    @Html.TextBoxFor(x => x.GroupName, new { @class = "form-control" })
+  
+    <br />
+    <b>Kursun adi</b>
+    @Html.DropDownListFor(x=>x.LanguageAboutId,(List<SelectListItem>)ViewBag.Values,new {@class="form-control"})
+
+    <br />
+    <b>Muellim</b>
+    @Html.DropDownListFor(x=>x.TeacherId,(List<SelectListItem>)ViewBag.Values2,new {@class="form-control"})
+
+    <br />
+    <button class="btn btn-info"> Elave et </button>
+
+}
+

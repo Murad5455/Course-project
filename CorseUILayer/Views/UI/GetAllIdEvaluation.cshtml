@@ -1,0 +1,29 @@
+﻿@model List<CorseEntity.Concrete.Evaluation>
+@{
+    ViewData["Title"] = "GetAllIdEvaluation";
+    Layout = "~/Views/Shared/Layout_UI.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Davamiyyeti</th>
+        <th>Qiymeti</th>
+        <th>Dersin tarixi</th>
+        <th>Telebenin adi</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EvaluationId</td>
+            <td>@item.Continuity</td>
+            <td>@item.Price</td>
+            <td>@item.PriceGiveDate.ToString("dd/MM/yyyy")</td>
+          @*  <td>@item.StudentID</td>*@
+            <td>@(ViewBag.StudentName.Count > 0 ? ViewBag.StudentName[0] : "Not Available")</td>
+
+        </tr>
+    }
+
+</table>

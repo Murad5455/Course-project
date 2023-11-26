@@ -1,0 +1,12 @@
+D:\GitHub test\CorseRegistration\CorseEntity\bin\Release\net6.0\CorseEntity.deps.json
+D:\GitHub test\CorseRegistration\CorseEntity\bin\Release\net6.0\CorseEntity.dll
+D:\GitHub test\CorseRegistration\CorseEntity\bin\Release\net6.0\CorseEntity.pdb
+D:\GitHub test\CorseRegistration\CorseEntity\obj\Release\net6.0\CorseEntity.csproj.AssemblyReference.cache
+D:\GitHub test\CorseRegistration\CorseEntity\obj\Release\net6.0\CorseEntity.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub test\CorseRegistration\CorseEntity\obj\Release\net6.0\CorseEntity.AssemblyInfoInputs.cache
+D:\GitHub test\CorseRegistration\CorseEntity\obj\Release\net6.0\CorseEntity.AssemblyInfo.cs
+D:\GitHub test\CorseRegistration\CorseEntity\obj\Release\net6.0\CorseEntity.csproj.CoreCompileInputs.cache
+D:\GitHub test\CorseRegistration\CorseEntity\obj\Release\net6.0\CorseEntity.dll
+D:\GitHub test\CorseRegistration\CorseEntity\obj\Release\net6.0\refint\CorseEntity.dll
+D:\GitHub test\CorseRegistration\CorseEntity\obj\Release\net6.0\CorseEntity.pdb
+D:\GitHub test\CorseRegistration\CorseEntity\obj\Release\net6.0\ref\CorseEntity.dll

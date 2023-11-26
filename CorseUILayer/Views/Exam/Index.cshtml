@@ -1,0 +1,37 @@
+﻿@model List<CorseEntity.Concrete.Exam>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Idsi</th>
+        <th>Telebe adi</th>
+        <th>Imtahan movzusu</th>
+        <th>100 uzerinden qiymetlendirme</th>
+        <th>Tarixi</th>
+       
+        <th>Guncelle</th>
+        <th>Sil</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ExamId</td>
+          @*  <td>@ViewBag.StudentName</td>*@
+            <td>@(ViewBag.StudentName.Count > 0 ? ViewBag.StudentName[0] : "Not Available")</td>
+
+            <td>@item.ExamTopic</td>
+            <td>@item.ExamGrade</td>
+            <td>@item.ExamTime.ToString("dd/MM/yyyy")</td>
+            <td><a href="/Exam/GetUpdateExam/@item.ExamId/" class="btn btn-warning">Guncelle</a></td>
+            <td><a href="/Exam/ExamDelete/@item.ExamId/" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+
+</table>
+
+<a href="/Exam/GetAddExam/" class="btn btn-primary">Yeni imtahan</a>

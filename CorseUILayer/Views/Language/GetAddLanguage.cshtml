@@ -1,0 +1,32 @@
+﻿@model CorseEntity.Concrete.LanguageAbout
+@{
+    ViewData["Title"] = "GetAddLanguage";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+@using (Html.BeginForm("AddLanguage", "Language", FormMethod.Post))
+{
+    <br />
+
+    <b>Id</b>
+    @Html.TextBoxFor(x => x.LanguageAboutId, new { @class = "form-control" })
+
+    <br />
+    <b>Kursun adi</b>
+    @Html.TextBoxFor(x => x.LanguageName, new { @class = "form-control" })
+
+    <br />
+    <b>Aciqlama</b>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+
+   @* <br />
+    <b>Yaradilma tarixi</b>
+    @Html.TextBoxFor(x => x.CreateLanguageTime, new { @class = "form-control" })
+*@
+    
+    <br />
+    <button class="btn btn-info"> Elave et </button>
+
+}
+
+

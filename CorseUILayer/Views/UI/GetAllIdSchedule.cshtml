@@ -1,0 +1,37 @@
+﻿@model List<CorseEntity.Concrete.Schedule>
+@{
+    ViewData["Title"] = "GetAllIdSchedule";
+    Layout = "~/Views/Shared/Layout_UI.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Bazar ertəsi</th>
+        <th>Çərşənbə axşamı</th>
+        <th>Çərşənbə</th>
+        <th>Cümə axşamı</th>
+        <th>Cümə</th>
+        <th>Şənbə</th>
+        <th>Bazar</th>
+        <th>Yaradilma tarixi</th>
+       
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ClassScheduleId</td>
+            <td>@item.Monday</td>
+            <td>@item.Tuesday</td>
+            <td>@item.Wednesday</td>
+            <td>@item.Thursday</td>
+            <td>@item.Friday</td>
+            <td>@item.Saturday</td>
+            <td>@item.Sunday</td>
+            <td>@item.CreateTime.ToString("dd/MM/yyyy")</td>
+
+        </tr>
+    }
+
+</table>

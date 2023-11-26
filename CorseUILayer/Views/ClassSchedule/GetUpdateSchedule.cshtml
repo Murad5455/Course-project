@@ -1,0 +1,54 @@
+﻿@model CorseEntity.Concrete.Schedule
+@{
+    ViewData["Title"] = "GetUpdateSchedule";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+@using (Html.BeginForm("UpdateSchedule", "ClassSchedule", FormMethod.Post))
+{
+    <br />
+    <br />
+    <b>ID</b>
+    @Html.TextBoxFor(x => x.ClassScheduleId, new { @class = "form-control" })
+    
+
+    <br />
+    <b>Bazar ertəsi</b>
+    @Html.TextBoxFor(x => x.Monday, new { @class = "form-control" })
+
+    <br />
+    <b>Çərşənbə axşamı</b>
+    @Html.TextBoxFor(x => x.Tuesday, new { @class = "form-control" })
+
+    <br />
+    <b>Çərşənbə</b>
+    @Html.TextBoxFor(x => x.Wednesday, new { @class = "form-control" })
+
+    <br />
+    <b>Cümə axşamı</b>
+    @Html.TextBoxFor(x => x.Thursday, new { @class = "form-control" })
+
+    <br />
+    <b>Cümə</b>
+    @Html.TextBoxFor(x => x.Friday, new { @class = "form-control" })
+
+    <br />
+    <b>Şənbə</b>
+    @Html.TextBoxFor(x => x.Saturday, new { @class = "form-control" })
+
+    <br />
+    <b>Bazar</b>
+    @Html.TextBoxFor(x => x.Sunday, new { @class = "form-control" })
+
+    <br />
+    <b>Tarix</b>
+    @Html.TextBoxFor(x => x.CreateTime, new { @class = "form-control" })
+
+    <br />
+    <b>Qrup id</b>
+    @Html.DropDownListFor(x=>x.GroupId,(List<SelectListItem>)ViewBag.Values,new {@class="form-control"})
+
+    <br />
+    <button class="btn btn-info"> Guncelle </button>
+
+}

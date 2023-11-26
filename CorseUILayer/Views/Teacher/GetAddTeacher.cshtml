@@ -1,0 +1,36 @@
+﻿@model CorseEntity.Concrete.Teacher
+
+@{
+    ViewData["Title"] = "GetAddTeacher";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+@using (Html.BeginForm("UpdateTeacher", "Teacher", FormMethod.Post))
+{
+    <br />
+
+    <b>Idsi</b>
+    @Html.TextBoxFor(x => x.TeacherId, new { @class = "form-control" })
+
+    <br />
+    <b>Adi</b>
+    @Html.TextBoxFor(x => x.TeacherName, new { @class = "form-control" })
+
+    <br />
+    <b>Soyadi</b>
+    @Html.TextBoxFor(x => x.TeacherLastname, new { @class = "form-control" })
+
+    <br />
+    <b>Yasi</b>
+    @Html.TextBoxFor(x => x.TeacherAge, new { @class = "form-control" })
+
+    <br />
+    <b>Vezifesi</b>
+    @Html.TextBoxFor(x => x.Position, new { @class = "form-control" })
+
+
+    <br />
+    <button class="btn btn-info"> Guncelle </button>
+
+}
+

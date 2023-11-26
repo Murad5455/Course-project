@@ -1,0 +1,35 @@
+﻿@using CorseEntity.Concrete
+@model List<Teacher>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Idsi</th>
+        <th>Adi</th>
+        <th>Soyadi</th>
+        <th>Yasi</th>
+        <th>Vezifesi</th>
+        <th>Guncelle</th>
+        <th>Sil</th>
+    </tr>
+   <tr>
+        @foreach (var item in Model)
+    {
+        <tr>  
+        <td> @item.TeacherId</td>
+            <td> @item.TeacherName</td>
+            <td> @item.TeacherLastname</td>
+            <td> @item.TeacherAge</td>
+            <td> @item.Position</td>
+            <td><a href="/Teacher/GetUpdateTeacher/@item.TeacherId/" class="btn btn-warning">Guncelle</a></td>
+        <td><a href="/Teacher/DeleteTeacher/@item.TeacherId/"class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+  
+
+</table>
+
+<a href="/Teacher/GetAddTeacher/" class="btn btn-primary">Elave et</a>

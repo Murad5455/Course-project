@@ -1,0 +1,31 @@
+﻿@model List<CorseEntity.Concrete.Student>
+@{
+    ViewData["Title"] = "GeALLIdStudent";
+    Layout = "~/Views/Shared/Layout_UI.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Adi</th>
+        <th>Soyadi</th>
+        <th>Yasi</th>
+        <th>Qeydiyyat tarixi</th>
+        <th>Fealiyyeti</th>
+        <th>Imtahan</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudentID</td>
+            <td>@item.StudentName</td>
+            <td>@item.StudentSureName</td>
+            <th>@item.StudentAge</th>
+            <th>@item.CreateStudentTime.ToString("dd/MM/yyyy")</th>
+            <th><a href="/UI/GetAllIdEvaluation/@item.StudentID/" class="btn btn-primary">Qiymeti</a></th>
+            <th><a href="/UI/GetAllIdExam/@item.StudentID/" class="btn btn-primary">Imtahan</a></th>
+        </tr>
+    }
+
+</table>
+

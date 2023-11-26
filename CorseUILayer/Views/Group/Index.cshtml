@@ -1,0 +1,34 @@
+﻿@using CorseEntity.Concrete
+@model List<GroupAbout>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Corse.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Idsi</th>
+        <th>Qrupun adi</th>
+        <th>Yaranma tarixi</th>
+        <th>Telebeler</th>
+        <th>Ders cedveli</th>
+        <th>Guncelle</th>
+        <th>Sil</th>
+    </tr>
+ 
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>@item.GroupId</td>
+            <td>@item.GroupName</td>
+            <td>@item.CreateTime.ToString("dd/MM/yyyy")</td>
+            <td><a href="/Student/Index/@item.GroupId/" class="btn btn-primary">Telebeler</a></td>
+            <td><a href="/ClassSchedule/Index/@item.GroupId/" class="btn btn-primary">Ders cedveli</a></td>
+            <td><a href="/Group/GetUpdateGroup/@item.GroupId/" class="btn btn-warning">Guncelle</a></td>
+            <td><a href="/Group/DeleteGroup/@item.GroupId/" class="btn btn-danger">Sil</a></td>
+        </tr>
+        }
+    
+</table>
+
+<a href="/Group/GetAddGroup/" class="btn btn-primary">Yeni qrup</a>
